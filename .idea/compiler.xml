@@ -9,6 +9,5 @@
         <module name="Flight scanner" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="13" />
   </component>
 </project>
