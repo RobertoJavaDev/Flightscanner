@@ -48,11 +48,19 @@
     </properties>
 
     <dependencies>
+<<<<<<< HEAD
             <dependency>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-controls</artifactId>
                 <version>15.0.1</version>
             </dependency>
+=======
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>15.0.1</version>
+        </dependency>
+>>>>>>> window_look
 
         <dependency>
             <groupId>org.openjfx</groupId>
