@@ -10,15 +10,15 @@
 
 <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Flight.scanner.controllers.TopMenuButtonsController">
     <children>
-        <ToggleButton mnemonicParsing="false" onAction="#openListOfCities" prefHeight="40.0" prefWidth="150.0" text="cities">
+        <ToggleButton mnemonicParsing="false" onAction="#openListOfCities" prefHeight="40.0" prefWidth="150.0" text="%cities">
             <toggleGroup>
                 <ToggleGroup fx:id="toggleButtons" />
             </toggleGroup>
         </ToggleButton>
-        <ToggleButton mnemonicParsing="false" onAction="#openListOfFlights" prefHeight="40.0" prefWidth="150.0" text="flights" toggleGroup="$toggleButtons" />
-        <ToggleButton mnemonicParsing="false" onAction="#openListOfPrices" prefHeight="40.0" prefWidth="150.0" text="prices" toggleGroup="$toggleButtons" />
-        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Add flight" />
-        <Button mnemonicParsing="false" onAction="#addCity" prefHeight="40.0" prefWidth="150.0" text="add.city">
+        <ToggleButton mnemonicParsing="false" onAction="#openListOfFlights" prefHeight="40.0" prefWidth="150.0" text="%flights" toggleGroup="$toggleButtons" />
+        <ToggleButton mnemonicParsing="false" onAction="#openListOfPrices" prefHeight="40.0" prefWidth="150.0" text="%prices" toggleGroup="$toggleButtons" />
+        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="%add.city" />
+        <Button mnemonicParsing="false" onAction="#addCity" prefHeight="40.0" prefWidth="150.0" text="%add.menuAirline">
             <graphic>
                 <ImageView fitHeight="28.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -27,7 +27,7 @@
                 </ImageView>
             </graphic>
         </Button>
-        <Button mnemonicParsing="false" onAction="#addAirline" prefHeight="40.0" prefWidth="150.0" text="add.menuAirline" />
+        <Button mnemonicParsing="false" onAction="#addAirline" prefHeight="40.0" prefWidth="150.0" text="%add.button" />
     </children>
     <padding>
         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
