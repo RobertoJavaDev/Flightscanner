@@ -35,8 +35,9 @@ public class TopMenuButtonsController {
         mainController.setCenter("/fxml/AddAirline.fxml");
     }
 
-    public void addConfig(ActionEvent actionEvent) {
+    public void addFlight(ActionEvent actionEvent) {
         resetToggleButtons();
+        mainController.setCenter("/fxml/AddFlight.fxml");
     }
 
     private void resetToggleButtons(){
