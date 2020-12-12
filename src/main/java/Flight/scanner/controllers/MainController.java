@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.CheckMenuItem;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -57,5 +58,14 @@ public class MainController {
         Stage stage = (Stage) borderPane.getScene().getWindow();
         boolean value = ((CheckMenuItem) actionEvent.getSource()).selectedProperty().get();
         stage.setAlwaysOnTop(value);
+    }
+
+    public void about(ActionEvent actionEvent) {
+        Alert informationAlert = new Alert(Alert.AlertType.INFORMATION);
+        informationAlert.setTitle(bundle.getString(("about.title")));
+        informationAlert.setHeaderText(bundle.getString("about.header"));
+        informationAlert.setContentText(bundle.getString("about.content"));
+        informationAlert.showAndWait();
+
     }
 }

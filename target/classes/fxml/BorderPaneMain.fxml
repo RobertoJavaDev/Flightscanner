@@ -14,6 +14,32 @@
    <top>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
           <VBox prefHeight="91.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <RadioMenuItem mnemonicParsing="false" onAction="#setCaspian" text="Caspian">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="styleGroup" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem mnemonicParsing="false" onAction="#setModena" text="Modena" toggleGroup="$styleGroup" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <CheckMenuItem mnemonicParsing="false" onAction="#alwaysOnTop" text="Always on top" />
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#about" text="About application" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
               <fx:include fx:id="topMenuButtons" source="TopMenuButtons.fxml" />
           </VBox>
 
