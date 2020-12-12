@@ -32,6 +32,7 @@ public class TopMenuButtonsController {
     @FXML
     public void addAirline(ActionEvent actionEvent) {
         resetToggleButtons();
+
     }
 
     public void addConfig(ActionEvent actionEvent) {
