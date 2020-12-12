@@ -32,7 +32,7 @@ public class TopMenuButtonsController {
     @FXML
     public void addAirline(ActionEvent actionEvent) {
         resetToggleButtons();
-
+        mainController.setCenter("/fxml/AddAirline.fxml");
     }
 
     public void addConfig(ActionEvent actionEvent) {
