@@ -1,5 +1,6 @@
 package Flight.scanner.controllers;
 
+import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,6 +43,14 @@ public class MainController {
         Platform.exit();
         System.exit(0);
     }
+    public void setCaspian(ActionEvent actionEvent) {
+        Application.setUserAgentStylesheet(Application.STYLESHEET_CASPIAN);
+    }
+
+    public void setModena(ActionEvent actionEvent) {
+        Application.setUserAgentStylesheet(Application.STYLESHEET_MODENA);
+    }
+
 
 
 }
