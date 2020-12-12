@@ -1,5 +1,6 @@
 package Flight.scanner.controllers;
 
+import Flight.scanner.utils.DialogsUtils;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -61,8 +62,6 @@ public class MainController {
     }
 
     public void about(ActionEvent actionEvent) {
-
-
-
+        DialogsUtils.dialogAboutApplication();
     }
 }
