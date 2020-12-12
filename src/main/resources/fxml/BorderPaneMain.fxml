@@ -16,26 +16,26 @@
           <VBox prefHeight="91.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
             <MenuBar>
               <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="%file">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="Close" />
+                    <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="%close" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
+                <Menu mnemonicParsing="false" text="%edit">
                      <items>
-                        <RadioMenuItem mnemonicParsing="false" onAction="#setCaspian" text="Caspian">
+                        <RadioMenuItem mnemonicParsing="false" onAction="#setCaspian" text="%caspian">
                            <toggleGroup>
                               <ToggleGroup fx:id="styleGroup" />
                            </toggleGroup>
                         </RadioMenuItem>
-                        <RadioMenuItem mnemonicParsing="false" onAction="#setModena" text="Modena" toggleGroup="$styleGroup" />
+                        <RadioMenuItem mnemonicParsing="false" onAction="#setModena" text="%modena" toggleGroup="$styleGroup" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <CheckMenuItem mnemonicParsing="false" onAction="#alwaysOnTop" text="Always on top" />
+                        <CheckMenuItem mnemonicParsing="false" onAction="#alwaysOnTop" text="%alwaysOnTop" />
                      </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Help">
+                <Menu mnemonicParsing="false" text="%help">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#about" text="About application" />
+                    <MenuItem mnemonicParsing="false" onAction="#about" text="%about" />
                   </items>
                 </Menu>
               </menus>
