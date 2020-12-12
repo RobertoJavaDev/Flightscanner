@@ -6,7 +6,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.CheckMenuItem;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 import javax.swing.border.Border;
 import java.io.IOException;
@@ -51,6 +53,9 @@ public class MainController {
         Application.setUserAgentStylesheet(Application.STYLESHEET_MODENA);
     }
 
-
-
+    public void alwaysOnTop(ActionEvent actionEvent) {
+        Stage stage = (Stage) borderPane.getScene().getWindow();
+        boolean value = ((CheckMenuItem) actionEvent.getSource()).selectedProperty().get();
+        stage.setAlwaysOnTop(value);
+    }
 }
