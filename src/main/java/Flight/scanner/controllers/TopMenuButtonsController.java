@@ -26,6 +26,7 @@ public class TopMenuButtonsController {
     @FXML
     public void addCity(ActionEvent actionEvent) {
         resetToggleButtons();
+        mainController.setCenter("/fxml/AddCity.fxml");
     }
 
     @FXML
