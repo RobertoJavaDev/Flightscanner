@@ -3,8 +3,6 @@ package Flight.scanner.utils;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextArea;
-
-import javax.swing.*;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
