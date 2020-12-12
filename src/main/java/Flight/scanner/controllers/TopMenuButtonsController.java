@@ -6,6 +6,9 @@ import javafx.scene.control.ToggleGroup;
 
 public class TopMenuButtonsController {
 
+    public static final String CITY_FXML = "/fxml/AddCity.fxml";
+    public static final String AIRLINE_FXML = "/fxml/AddAirline.fxml";
+    public static final String FLIGHT_FXML = "/fxml/AddFlight.fxml";
     private MainController mainController;
 
     @FXML
@@ -26,18 +29,18 @@ public class TopMenuButtonsController {
     @FXML
     public void addCity(ActionEvent actionEvent) {
         resetToggleButtons();
-        mainController.setCenter("/fxml/AddCity.fxml");
+        mainController.setCenter(CITY_FXML);
     }
 
     @FXML
     public void addAirline(ActionEvent actionEvent) {
         resetToggleButtons();
-        mainController.setCenter("/fxml/AddAirline.fxml");
+        mainController.setCenter(AIRLINE_FXML);
     }
 
     public void addFlight(ActionEvent actionEvent) {
         resetToggleButtons();
-        mainController.setCenter("/fxml/AddFlight.fxml");
+        mainController.setCenter(FLIGHT_FXML);
     }
 
     private void resetToggleButtons(){
