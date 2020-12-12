@@ -61,11 +61,8 @@ public class MainController {
     }
 
     public void about(ActionEvent actionEvent) {
-        Alert informationAlert = new Alert(Alert.AlertType.INFORMATION);
-        informationAlert.setTitle(bundle.getString(("about.title")));
-        informationAlert.setHeaderText(bundle.getString("about.header"));
-        informationAlert.setContentText(bundle.getString("about.content"));
-        informationAlert.showAndWait();
+
+
 
     }
 }
