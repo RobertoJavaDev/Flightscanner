@@ -9,8 +9,11 @@ public class Airline {
     public Airline() {
     }
 
-    @DatabaseField (generatedId = true)
+    @DatabaseField(generatedId = true)
     private int id;
+
+    @DatabaseField(columnName = "AIRLINE", canBeNull = false)
+    private String airline;
 
     public int getId() {
         return id;
@@ -28,6 +31,4 @@ public class Airline {
         this.airline = airline;
     }
 
-    @DatabaseField (columnName = "AIRLINE", canBeNull = false)
-    private String airline;
 }
