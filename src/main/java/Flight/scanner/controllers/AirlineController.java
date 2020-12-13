@@ -28,5 +28,6 @@ public class AirlineController {
 
     public void addAirlineOnActon(ActionEvent actionEvent) {
         airlineModel.saveAirlineInDataBase(airlineTextField.getText());
+        airlineTextField.clear();
     }
 }
