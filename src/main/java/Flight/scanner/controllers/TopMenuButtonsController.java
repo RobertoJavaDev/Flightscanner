@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ToggleGroup;
 
-public class TopMenuButtonsController { 
+public class TopMenuButtonsController {
 
     public static final String CITY_FXML = "/fxml/AddCity.fxml";
     public static final String AIRLINE_FXML = "/fxml/AddAirline.fxml";
