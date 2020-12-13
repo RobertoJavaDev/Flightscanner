@@ -1,5 +1,6 @@
 package Flight.scanner.controllers;
 
+import Flight.scanner.modelFX.AirlineFx;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -16,7 +17,7 @@ public class AirlineController {
     private TextField airlineTextField;
 
     @FXML
-    private ComboBox<String> airlineCombobox;
+    private ComboBox<AirlineFx> airlineCombobox;
 
 
     public void addAirlineOnActon(ActionEvent actionEvent) {
