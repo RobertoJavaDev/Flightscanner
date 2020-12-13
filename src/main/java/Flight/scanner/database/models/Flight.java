@@ -18,9 +18,9 @@ public class Flight implements BaseModel{
         private int id;
 
         @DatabaseField(columnName = DEPARTURE_ID, foreign = true, foreignAutoRefresh = true, foreignAutoCreate = true, canBeNull = false)
-        private Departure departure;
+        private City departure;
         @DatabaseField(columnName = ARRIVAL_ID, foreign = true, foreignAutoRefresh = true, foreignAutoCreate = true, canBeNull = false)
-        private Arrival arrival;
+        private City arrival;
 
         @DatabaseField(columnName = "PRICE", canBeNull = false)
         private int price;
@@ -42,19 +42,19 @@ public class Flight implements BaseModel{
             this.id = id;
         }
 
-        public Departure getDeparture() {
+        public City getDeparture() {
             return departure;
         }
 
-        public void setDeparture(Departure departure) {
+        public void setDeparture(City departure) {
             this.departure = departure;
         }
 
-        public Arrival getArrival() {
+        public City getArrival() {
             return arrival;
         }
 
-        public void setArrival(Arrival arrival) {
+        public void setArrival(City arrival) {
             this.arrival = arrival;
         }
 
