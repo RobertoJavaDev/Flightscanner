@@ -1,4 +1,9 @@
 package Flight.scanner.database.dao;
 
-public class FlightDao {
+import com.j256.ormlite.support.ConnectionSource;
+
+public class FlightDao extends CommonDao {
+    public FlightDao(ConnectionSource connectionSource) {
+        super(connectionSource);
+    }
 }
