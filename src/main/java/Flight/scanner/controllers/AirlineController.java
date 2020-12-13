@@ -24,6 +24,11 @@ public class AirlineController {
     @FXML
     public void initialize(){
         this.airlineModel = new AirlineModel();
+        initBindings();
+    }
+
+    private void initBindings() {
+        addAirlineButton.disableProperty().bind(airlineTextField.textProperty().isEmpty());
     }
 
     public void addAirlineOnActon(ActionEvent actionEvent) {
