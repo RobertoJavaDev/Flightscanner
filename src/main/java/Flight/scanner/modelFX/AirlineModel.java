@@ -11,7 +11,7 @@ public class AirlineModel {
         AirlineDao airlineDao = new AirlineDao(DbManager.getConnectionSource());
         Airline airline = new Airline();
         airline.setAirline(name);
-        airlineDao.creatOrUpdate((BaseModel) airline);
+        airlineDao.creatOrUpdate(airline);
         DbManager.closeConnectionSource();
     }
 }
