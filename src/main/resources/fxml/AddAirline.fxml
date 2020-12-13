@@ -8,13 +8,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Flight.scanner.controllers.AirlineController">
     <children>
         <HBox alignment="TOP_CENTER" prefHeight="37.0" prefWidth="580.0" spacing="20.0">
             <children>
                 <Label text="%add.airline" />
                 <TextField fx:id="airlineTextField" />
-                <Button fx:id="addAirlineButton" mnemonicParsing="false"  text="%add.button" />
+                <Button fx:id="addAirlineButton" mnemonicParsing="false" text="%add.button" />
                 <Label text="%choose.airline" />
                 <ComboBox fx:id="airlineCombobox" prefWidth="150.0" />
             </children>
