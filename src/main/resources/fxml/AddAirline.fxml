@@ -14,7 +14,7 @@
             <children>
                 <Label text="%add.airline" />
                 <TextField fx:id="airlineTextField" />
-                <Button fx:id="addAirlineButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="%add.button" />
+                <Button fx:id="addAirlineButton" mnemonicParsing="false" onAction="#addAirlineOnActon" prefHeight="25.0" prefWidth="78.0" text="%add.button" />
                 <Label text="%choose.airline" />
                 <ComboBox fx:id="airlineCombobox" prefWidth="150.0" />
             </children>
