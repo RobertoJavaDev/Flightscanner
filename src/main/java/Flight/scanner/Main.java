@@ -1,5 +1,6 @@
 package Flight.scanner;
 
+import Flight.scanner.database.dbutils.DbManager;
 import Flight.scanner.utils.FxmlUtils;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -17,6 +18,8 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle(FxmlUtils.getResourceBundle().getString("title.application"));
         primaryStage.show();
+
+        DbManager.initDatabase();
     }
 
     public static void main(String[] args) {
