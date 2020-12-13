@@ -17,7 +17,7 @@ public class CommonDao {
     private static final Logger LOGGER = LoggerFactory.getLogger(CommonDao.class);
     protected final ConnectionSource connectionSource;
 
-    public CommonDao() {
+    public CommonDao(ConnectionSource connectionSource) {
         this.connectionSource = DbManager.getConnectionSource();
     }
 
