@@ -34,61 +34,67 @@ public class Flight implements BaseModel{
         @DatabaseField(columnName = "ADDED_DATE")
         private Date addedDate;
 
-        public int getId() {
-            return id;
-        }
+    public static String getDepartureId() {
+        return DEPARTURE_ID;
+    }
 
-        public void setId(int id) {
-            this.id = id;
-        }
+    public static String getArrivalId() {
+        return ARRIVAL_ID;
+    }
 
-        public City getDeparture() {
-            return departure;
-        }
+    public int getId() {
+        return id;
+    }
 
-        public void setDeparture(City departure) {
-            this.departure = departure;
-        }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-        public City getArrival() {
-            return arrival;
-        }
+    public City getDeparture() {
+        return departure;
+    }
 
-        public void setArrival(City arrival) {
-            this.arrival = arrival;
-        }
+    public void setDeparture(City departure) {
+        this.departure = departure;
+    }
 
-        public String getAirline() {
-            return airline;
-        }
+    public City getArrival() {
+        return arrival;
+    }
 
-        public void setAirline(String airline) {
-            this.airline = airline;
-        }
+    public void setArrival(City arrival) {
+        this.arrival = arrival;
+    }
 
-        public Date getReleaseDate() {
-            return releaseDate;
-        }
+    public int getPrice() {
+        return price;
+    }
 
-        public void setReleaseDate(Date releaseDate) {
-            this.releaseDate = releaseDate;
-        }
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
-        public int getPrice() {
-            return price;
-        }
+    public String getAirline() {
+        return airline;
+    }
 
-        public void setPrice(int price) {
-            this.price = price;
-        }
+    public void setAirline(String airline) {
+        this.airline = airline;
+    }
 
-        public Date getAddedDate() {
-            return addedDate;
-        }
+    public Date getReleaseDate() {
+        return releaseDate;
+    }
 
-        public void setAddedDate(Date addedDate) {
-            this.addedDate = addedDate;
-        }
+    public void setReleaseDate(Date releaseDate) {
+        this.releaseDate = releaseDate;
+    }
 
+    public Date getAddedDate() {
+        return addedDate;
+    }
 
+    public void setAddedDate(Date addedDate) {
+        this.addedDate = addedDate;
+    }
 }
