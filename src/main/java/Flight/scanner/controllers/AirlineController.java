@@ -33,8 +33,8 @@ public class AirlineController {
     }
 
     private void initBindings() {
-        addAirlineButton.disableProperty().bind(airlineTextField.textProperty().isEmpty());
-
+        this.addAirlineButton.disableProperty().bind(airlineTextField.textProperty().isEmpty());
+        this.deleteAirlineButton.disableProperty().bind(this.airlineModel.airlineProperty().isNull());
     }
 
     public void addAirlineOnActon(ActionEvent actionEvent) {
