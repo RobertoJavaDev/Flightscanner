@@ -43,9 +43,11 @@ public class AirlineController {
     }
 
     public void deleteAirlineOnAction(ActionEvent actionEvent) {
-
+        this.airlineModel.deleteAirlineById();
     }
 
     public void onActionComboBox(ActionEvent actionEvent) {
+        this.airlineModel.setAirline(this.airlineCombobox.getSelectionModel().getSelectedItem());
+
     }
 }

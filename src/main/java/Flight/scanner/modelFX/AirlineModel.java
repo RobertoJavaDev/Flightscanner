@@ -30,6 +30,13 @@ public class AirlineModel {
         DbManager.closeConnectionSource();
     }
 
+    public void deleteAirlineById (){
+        AirlineDao airlineDao = new AirlineDao(DbManager.getConnectionSource());
+        airlineDao.deleteById(Airline.class, airline.getValue().getId());
+        DbManager.closeConnectionSource();
+        init();
+    }
+
     public void saveAirlineInDataBase(String name){
         AirlineDao airlineDao = new AirlineDao(DbManager.getConnectionSource());
         Airline airline = new Airline();

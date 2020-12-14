@@ -16,7 +16,7 @@
                 <TextField fx:id="airlineTextField" />
                 <Button fx:id="addAirlineButton" mnemonicParsing="false" onAction="#addAirlineOnActon" prefHeight="25.0" prefWidth="78.0" text="%add.button" />
                 <Label text="%choose.airline" />
-                <ComboBox fx:id="airlineCombobox" prefWidth="150.0" />
+                <ComboBox fx:id="airlineCombobox" onAction="#onActionComboBox" prefWidth="150.0" />
             <Button fx:id="deleteAirlineButton" mnemonicParsing="false" onAction="#deleteAirlineOnAction" text="%del" />
             </children>
             <VBox.margin>
