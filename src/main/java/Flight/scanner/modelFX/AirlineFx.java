@@ -33,4 +33,9 @@ public class AirlineFx {
     public void setAirline(String airline) {
         this.airline.set(airline);
     }
+
+    @Override
+    public String toString() {
+        return airline.getValue();
+    }
 }
