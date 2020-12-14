@@ -43,5 +43,9 @@ public class AirlineController {
     }
 
     public void deleteAirlineOnAction(ActionEvent actionEvent) {
+
+    }
+
+    public void onActionComboBox(ActionEvent actionEvent) {
     }
 }
