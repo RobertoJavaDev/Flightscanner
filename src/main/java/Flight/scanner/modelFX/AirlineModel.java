@@ -36,4 +36,24 @@ public class AirlineModel {
         airlineDao.creatOrUpdate(airline);
         DbManager.closeConnectionSource();
     }
+
+    public ObservableList<AirlineFx> getAirlineList() {
+        return airlineList;
+    }
+
+    public void setAirlineList(ObservableList<AirlineFx> airlineList) {
+        this.airlineList = airlineList;
+    }
+
+    public AirlineFx getAirline() {
+        return airline.get();
+    }
+
+    public ObjectProperty<AirlineFx> airlineProperty() {
+        return airline;
+    }
+
+    public void setAirline(AirlineFx airline) {
+        this.airline.set(airline);
+    }
 }

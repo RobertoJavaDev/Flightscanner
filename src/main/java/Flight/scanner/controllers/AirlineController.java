@@ -27,12 +27,14 @@ public class AirlineController {
     @FXML
     public void initialize(){
         this.airlineModel = new AirlineModel();
+        this.airlineModel.init();
+        this.airlineCombobox.setItems(this.airlineModel.getAirlineList());
         initBindings();
     }
 
     private void initBindings() {
         addAirlineButton.disableProperty().bind(airlineTextField.textProperty().isEmpty());
-        
+
     }
 
     public void addAirlineOnActon(ActionEvent actionEvent) {
