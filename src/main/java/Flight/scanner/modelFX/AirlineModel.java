@@ -19,6 +19,7 @@ public class AirlineModel {
     public void init(){
         AirlineDao airlineDao = new AirlineDao(DbManager.getConnectionSource());
         List<Airline> airlines = airlineDao.queryForAll(Airline.class);
+        this.airlineList.clear();
         airlines.forEach(c->{
             AirlineFx airlineFx = new AirlineFx();
             airlineFx.setId(c.getId());
@@ -35,6 +36,7 @@ public class AirlineModel {
         airline.setAirline(name);
         airlineDao.creatOrUpdate(airline);
         DbManager.closeConnectionSource();
+        init();
     }
 
     public ObservableList<AirlineFx> getAirlineList() {
