@@ -15,6 +15,9 @@ public class AirlineController {
     private Button addAirlineButton;
 
     @FXML
+    private Button deleteAirlineButton;
+
+    @FXML
     private TextField airlineTextField;
 
     @FXML
@@ -29,6 +32,7 @@ public class AirlineController {
 
     private void initBindings() {
         addAirlineButton.disableProperty().bind(airlineTextField.textProperty().isEmpty());
+        
     }
 
     public void addAirlineOnActon(ActionEvent actionEvent) {
