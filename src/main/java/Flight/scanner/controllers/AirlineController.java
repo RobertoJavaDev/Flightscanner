@@ -35,4 +35,7 @@ public class AirlineController {
         airlineModel.saveAirlineInDataBase(airlineTextField.getText());
         airlineTextField.clear();
     }
+
+    public void deleteAirlineOnAction(ActionEvent actionEvent) {
+    }
 }
