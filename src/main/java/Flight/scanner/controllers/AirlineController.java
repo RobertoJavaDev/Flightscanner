@@ -2,7 +2,6 @@ package Flight.scanner.controllers;
 
 import Flight.scanner.modelFX.AirlineFx;
 import Flight.scanner.modelFX.AirlineModel;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -41,20 +40,20 @@ public class AirlineController {
         this.editAirlineButton.disableProperty().bind(this.airlineModel.airlineProperty().isNull());
     }
 
-    public void addAirlineOnActon(ActionEvent actionEvent) {
+    public void addAirlineOnActon() {
         airlineModel.saveAirlineInDataBase(airlineTextField.getText());
         airlineTextField.clear();
     }
 
-    public void deleteAirlineOnAction(ActionEvent actionEvent) {
+    public void deleteAirlineOnAction() {
         this.airlineModel.deleteAirlineById();
     }
 
-    public void onActionComboBox(ActionEvent actionEvent) {
+    public void onActionComboBox() {
         this.airlineModel.setAirline(this.airlineCombobox.getSelectionModel().getSelectedItem());
 
     }
 
-    public void editOnAction(ActionEvent actionEvent) {
+    public void editOnAction() {
     }
 }
