@@ -45,6 +45,14 @@ public class AirlineModel {
         DbManager.closeConnectionSource();
         init();
     }
+    public void updateAirlineInDatabase() {
+        AirlineDao airlineDao = new AirlineDao(DbManager.getConnectionSource());
+        Airline tempAirline = airlineDao.findById(Airline.class, getAirline().getId());
+        tempAirline.setAirline(getAirline().getAirline());
+        airlineDao.creatOrUpdate(tempAirline);
+        DbManager.closeConnectionSource();
+        init();
+    }
 
     public ObservableList<AirlineFx> getAirlineList() {
         return airlineList;
