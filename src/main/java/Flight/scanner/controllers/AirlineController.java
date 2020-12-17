@@ -53,4 +53,7 @@ public class AirlineController {
         this.airlineModel.setAirline(this.airlineCombobox.getSelectionModel().getSelectedItem());
 
     }
+
+    public void editOnAction(ActionEvent actionEvent) {
+    }
 }
