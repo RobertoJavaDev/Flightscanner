@@ -3,6 +3,8 @@ package Flight.scanner.utils;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextInputDialog;
+
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -36,4 +38,14 @@ public class DialogsUtils {
 
         errorAlert.showAndWait();
     }
+
+    public static String editDialog (String value){
+        TextInputDialog dialog = new TextInputDialog(value);
+        dialog.setTitle();
+        dialog.setHeaderText();
+        dialog.setContentText();
+
+    }
+
+
 }
