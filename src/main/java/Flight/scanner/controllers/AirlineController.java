@@ -15,6 +15,9 @@ public class AirlineController {
     private Button addAirlineButton;
 
     @FXML
+    private Button editAirlineButton;
+
+    @FXML
     private Button deleteAirlineButton;
 
     @FXML
