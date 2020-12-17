@@ -69,6 +69,7 @@ public class CommonDao {
         }
     }
 
+
     public <T extends BaseModel, I> T findById(Class<T> cls, Integer id) {
         try {
             Dao<T, I> dao = (Dao<T, I>) getDao(cls);

@@ -73,4 +73,6 @@ public class AirlineModel {
     public void setAirline(AirlineFx airline) {
         this.airline.set(airline);
     }
+
+
 }
