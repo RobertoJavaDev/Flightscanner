@@ -41,10 +41,14 @@ public class DialogsUtils {
 
     public static String editDialog (String value){
         TextInputDialog dialog = new TextInputDialog(value);
-        dialog.setTitle();
-        dialog.setHeaderText();
-        dialog.setContentText();
-
+        dialog.setTitle(bundle.getString("edit.title"));
+        dialog.setHeaderText(bundle.getString("edit.header"));
+        dialog.setContentText(bundle.getString("edit.content"));
+        Optional<String> result = dialog.showAndWait();
+        if (result.isPresent()){
+            return result.get();
+        }
+        return null;
     }
 
 
