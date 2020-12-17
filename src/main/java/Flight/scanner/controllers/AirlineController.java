@@ -55,5 +55,10 @@ public class AirlineController {
     }
 
     public void editOnAction() {
+        String newAirlineName = DialogsUtils.editDialog(this.airlineModel.getAirline().getAirline());
+        if (newAirlineName!=null){
+            this.airlineModel.getAirline().setAirline(newAirlineName);
+            this.airlineModel.updateAirlineInDatabase();
+        }
     }
 }
