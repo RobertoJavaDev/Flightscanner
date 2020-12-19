@@ -38,7 +38,7 @@ public class AirlineModel {
         init();
     }
 
-    public void saveAirlineInDataBase(String name){
+    public void saveAirlineInDataBase(String name) throws ApplicationException {
         AirlineDao airlineDao = new AirlineDao(DbManager.getConnectionSource());
         Airline airline = new Airline();
         airline.setAirline(name);
@@ -46,7 +46,7 @@ public class AirlineModel {
         DbManager.closeConnectionSource();
         init();
     }
-    public void updateAirlineInDatabase() {
+    public void updateAirlineInDatabase() throws ApplicationException {
         AirlineDao airlineDao = new AirlineDao(DbManager.getConnectionSource());
         Airline tempAirline = airlineDao.findById(Airline.class, getAirline().getId());
         tempAirline.setAirline(getAirline().getAirline());

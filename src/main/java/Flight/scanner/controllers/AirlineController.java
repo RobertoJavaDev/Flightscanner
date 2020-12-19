@@ -42,8 +42,12 @@ public class AirlineController {
         this.editAirlineButton.disableProperty().bind(this.airlineModel.airlineProperty().isNull());
     }
 
-    public void addAirlineOnActon() {
-        airlineModel.saveAirlineInDataBase(airlineTextField.getText());
+    public void addAirlineOnActon(){
+        try {
+            airlineModel.saveAirlineInDataBase(airlineTextField.getText());
+        } catch (ApplicationException e) {
+            DialogsUtils.errorDialog(e.getMessage());
+        }
         airlineTextField.clear();
     }
 
@@ -56,11 +60,15 @@ public class AirlineController {
 
     }
 
-    public void editOnAction() {
+    public void editOnAction(){
         String newAirlineName = DialogsUtils.editDialog(this.airlineModel.getAirline().getAirline());
         if (newAirlineName!=null){
             this.airlineModel.getAirline().setAirline(newAirlineName);
-            this.airlineModel.updateAirlineInDatabase();
+            try {
+                this.airlineModel.updateAirlineInDatabase();
+            } catch (ApplicationException e) {
+                DialogsUtils.errorDialog(e.getMessage());
+            }
         }
     }
 }

@@ -2,6 +2,8 @@ package Flight.scanner.database.dao;
 
 import Flight.scanner.database.dbutils.DbManager;
 import Flight.scanner.database.models.BaseModel;
+import Flight.scanner.utils.FxmlUtils;
+import Flight.scanner.utils.exceptions.ApplicationException;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.logger.Logger;
