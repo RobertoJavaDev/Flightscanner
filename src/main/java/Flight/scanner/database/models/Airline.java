@@ -12,7 +12,7 @@ public class Airline implements BaseModel {
     @DatabaseField(generatedId = true)
     private int id;
 
-    @DatabaseField(columnName = "AIRLINE", canBeNull = false)
+    @DatabaseField(columnName = "AIRLINE", canBeNull = false, unique = true)
     private String airline;
 
     public int getId() {
