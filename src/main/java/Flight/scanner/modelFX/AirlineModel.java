@@ -4,6 +4,7 @@ import Flight.scanner.database.dao.AirlineDao;
 import Flight.scanner.database.dbutils.DbManager;
 import Flight.scanner.database.models.Airline;
 import Flight.scanner.database.models.BaseModel;
+import Flight.scanner.utils.converters.ConverterAirline;
 import Flight.scanner.utils.exceptions.ApplicationException;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -23,15 +24,16 @@ public class AirlineModel {
     public void init() throws ApplicationException {
         AirlineDao airlineDao = new AirlineDao(DbManager.getConnectionSource());
         List<Airline> airlines = airlineDao.queryForAll(Airline.class);
+        initAirlineList(airlines);
+        DbManager.closeConnectionSource();
+    }
+
+    private void initAirlineList(List<Airline> airlines) {
         this.airlineList.clear();
         airlines.forEach(c->{
-            AirlineFx airlineFx = new AirlineFx();
-            airlineFx.setId(c.getId());
-            airlineFx.setAirline(c.getAirline());
+            AirlineFx airlineFx = ConverterAirline.converterToAirlineFx(c);
             this.airlineList.add(airlineFx);
-
         });
-        DbManager.closeConnectionSource();
     }
 
     public void deleteAirlineById () throws ApplicationException {
