@@ -21,12 +21,13 @@ public class CommonDao {
         this.connectionSource = DbManager.getConnectionSource();
     }
 
-    public <T extends BaseModel, I> void creatOrUpdate(BaseModel baseModel) {
+    public <T extends BaseModel, I> void creatOrUpdate(BaseModel baseModel) throws ApplicationException {
         Dao<T, I> dao = (Dao<T, I>) getDao((Class<T>) baseModel.getClass());
         try {
             dao.createOrUpdate((T) baseModel);
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
+            throw new ApplicationException(FxmlUtils.getResourceBundle().getString("error.create.update"));
 
         } finally {
             this.closeDbConnection();

@@ -3,6 +3,7 @@ package Flight.scanner.controllers;
 import Flight.scanner.modelFX.AirlineFx;
 import Flight.scanner.modelFX.AirlineModel;
 import Flight.scanner.utils.DialogsUtils;
+import Flight.scanner.utils.exceptions.ApplicationException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;

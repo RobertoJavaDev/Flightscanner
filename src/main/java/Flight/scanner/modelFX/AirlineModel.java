@@ -4,6 +4,7 @@ import Flight.scanner.database.dao.AirlineDao;
 import Flight.scanner.database.dbutils.DbManager;
 import Flight.scanner.database.models.Airline;
 import Flight.scanner.database.models.BaseModel;
+import Flight.scanner.utils.exceptions.ApplicationException;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
