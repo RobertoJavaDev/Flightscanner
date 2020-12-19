@@ -25,7 +25,12 @@ public class AirlineModel {
         AirlineDao airlineDao = new AirlineDao(DbManager.getConnectionSource());
         List<Airline> airlines = airlineDao.queryForAll(Airline.class);
         initAirlineList(airlines);
+        initRoot(airline);
         DbManager.closeConnectionSource();
+    }
+
+    private void initRoot(ObjectProperty<AirlineFx> airline) {
+
     }
 
     private void initAirlineList(List<Airline> airlines) {
