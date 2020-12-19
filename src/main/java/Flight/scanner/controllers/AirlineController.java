@@ -27,7 +27,7 @@ public class AirlineController {
     private AirlineModel airlineModel;
 
     @FXML
-    private TreeItem<String> airlineTreeView;
+    private TreeView<String> airlineTreeView;
 
     @FXML
     public void initialize(){
