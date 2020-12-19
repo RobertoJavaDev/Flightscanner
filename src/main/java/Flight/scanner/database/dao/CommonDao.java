@@ -36,36 +36,39 @@ public class CommonDao {
         }
     }
 
-    public <T extends BaseModel, I> void refresh(BaseModel baseModel){
+    public <T extends BaseModel, I> void refresh(BaseModel baseModel) throws ApplicationException {
         try {
             Dao<T, I> dao = (Dao<T, I>) getDao((Class<T>) baseModel.getClass());
             dao.refresh((T) baseModel);
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
+            throw new ApplicationException(FxmlUtils.getResourceBundle().getString("error.refresh"));
 
         } finally {
             this.closeDbConnection();
         }
     }
 
-    public <T extends BaseModel, I> void delete(BaseModel baseModel) {
+    public <T extends BaseModel, I> void delete(BaseModel baseModel) throws ApplicationException {
         try {
             Dao<T, I> dao = (Dao<T, I>) getDao((Class<T>) baseModel.getClass());
             dao.delete((T) baseModel);
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
+            throw new ApplicationException(FxmlUtils.getResourceBundle().getString("error.delete"));
 
         } finally {
             this.closeDbConnection();
         }
     }
 
-    public <T extends BaseModel, I> void deleteById(Class<T> cls, Integer id)  {
+    public <T extends BaseModel, I> void deleteById(Class<T> cls, Integer id) throws ApplicationException {
         try {
             Dao<T, I> dao = (Dao<T, I>) getDao(cls);
             dao.deleteById((I) id);
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
+            throw new ApplicationException(FxmlUtils.getResourceBundle().getString("error.delete"));
 
         } finally {
             this.closeDbConnection();
@@ -73,46 +76,46 @@ public class CommonDao {
     }
 
 
-    public <T extends BaseModel, I> T findById(Class<T> cls, Integer id) {
+    public <T extends BaseModel, I> T findById(Class<T> cls, Integer id) throws ApplicationException {
         try {
             Dao<T, I> dao = (Dao<T, I>) getDao(cls);
             return dao.queryForId((I) id);
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
+            throw new ApplicationException(FxmlUtils.getResourceBundle().getString("error.not.found"));
 
         } finally {
             this.closeDbConnection();
         }
-        return null;
     }
 
-    public <T extends BaseModel, I> List<T> queryForAll(Class<T> cls) {
+    public <T extends BaseModel, I> List<T> queryForAll(Class<T> cls) throws ApplicationException {
         try {
             Dao<T, I> dao = (Dao<T, I>) getDao(cls);
             return dao.queryForAll();
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
+            throw new ApplicationException(FxmlUtils.getResourceBundle().getString("error.not.found.all"));
 
         } finally {
             this.closeDbConnection();
         }
-        return null;
     }
 
 
-    public <T extends BaseModel, I> Dao<T, ?> getDao(Class<T> cls)  {
+    public <T extends BaseModel, I> Dao<T, ?> getDao(Class<T> cls) throws ApplicationException {
         try {
             return DaoManager.createDao(connectionSource, cls);
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
+            throw new ApplicationException(FxmlUtils.getResourceBundle().getString("error.get.dao"));
 
         } finally {
             this.closeDbConnection();
         }
-        return null;
     }
 
-    public <T extends BaseModel, I> QueryBuilder<T, I> getQueryBuilder(Class<T> cls) {
+    public <T extends BaseModel, I> QueryBuilder<T, I> getQueryBuilder(Class<T> cls) throws ApplicationException {
         Dao<T, I> dao = (Dao<T, I>) getDao(cls);
         return dao.queryBuilder();
     }

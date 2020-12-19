@@ -17,7 +17,7 @@ public class AirlineModel {
     private ObservableList<AirlineFx> airlineList = FXCollections.observableArrayList();
     private ObjectProperty<AirlineFx> airline = new SimpleObjectProperty<>();
 
-    public void init(){
+    public void init() throws ApplicationException {
         AirlineDao airlineDao = new AirlineDao(DbManager.getConnectionSource());
         List<Airline> airlines = airlineDao.queryForAll(Airline.class);
         this.airlineList.clear();
@@ -31,7 +31,7 @@ public class AirlineModel {
         DbManager.closeConnectionSource();
     }
 
-    public void deleteAirlineById (){
+    public void deleteAirlineById () throws ApplicationException {
         AirlineDao airlineDao = new AirlineDao(DbManager.getConnectionSource());
         airlineDao.deleteById(Airline.class, airline.getValue().getId());
         DbManager.closeConnectionSource();

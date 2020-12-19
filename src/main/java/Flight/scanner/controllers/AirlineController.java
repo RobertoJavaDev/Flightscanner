@@ -31,7 +31,11 @@ public class AirlineController {
     @FXML
     public void initialize(){
         this.airlineModel = new AirlineModel();
-        this.airlineModel.init();
+        try {
+            this.airlineModel.init();
+        } catch (ApplicationException e) {
+            DialogsUtils.errorDialog(e.getMessage());
+        }
         this.airlineCombobox.setItems(this.airlineModel.getAirlineList());
         initBindings();
     }
@@ -52,7 +56,11 @@ public class AirlineController {
     }
 
     public void deleteAirlineOnAction() {
-        this.airlineModel.deleteAirlineById();
+        try {
+            this.airlineModel.deleteAirlineById();
+        } catch (ApplicationException e) {
+            DialogsUtils.errorDialog(e.getMessage());
+        }
     }
 
     public void onActionComboBox() {
