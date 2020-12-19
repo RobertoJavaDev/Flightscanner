@@ -5,9 +5,7 @@ import Flight.scanner.modelFX.AirlineModel;
 import Flight.scanner.utils.DialogsUtils;
 import Flight.scanner.utils.exceptions.ApplicationException;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 
 public class AirlineController {
@@ -27,6 +25,9 @@ public class AirlineController {
     @FXML
     private ComboBox<AirlineFx> airlineCombobox;
     private AirlineModel airlineModel;
+
+    @FXML
+    private TreeItem<String> airlineTreeView;
 
     @FXML
     public void initialize(){
