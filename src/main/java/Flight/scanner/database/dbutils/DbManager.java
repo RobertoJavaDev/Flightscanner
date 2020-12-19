@@ -24,6 +24,7 @@ public class DbManager {
 
     public static void initDatabase(){
         createConnectionSource();
+        dropTable();
         createTable();
         closeConnectionSource();
     }
@@ -58,6 +59,16 @@ public class DbManager {
             TableUtils.createTableIfNotExists(connectionSource, City.class);
             TableUtils.createTableIfNotExists(connectionSource, Flight.class);
             TableUtils.createTableIfNotExists(connectionSource, Airline.class);
+        } catch (SQLException e) {
+            LOGGER.warn(e.getMessage());
+        }
+    }
+
+    private  static  void  dropTable(){
+        try {
+            TableUtils.dropTable(connectionSource, Airline.class, true);
+            TableUtils.dropTable(connectionSource, City.class, true);
+            TableUtils.dropTable(connectionSource, Flight.class, true);
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage());
         }
