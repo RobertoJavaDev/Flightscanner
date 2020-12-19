@@ -9,6 +9,7 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.TreeItem;
 
 import java.util.List;
 
@@ -16,6 +17,8 @@ public class AirlineModel {
 
     private ObservableList<AirlineFx> airlineList = FXCollections.observableArrayList();
     private ObjectProperty<AirlineFx> airline = new SimpleObjectProperty<>();
+    private TreeItem<String> root = new TreeItem<>();
+
 
     public void init() throws ApplicationException {
         AirlineDao airlineDao = new AirlineDao(DbManager.getConnectionSource());
@@ -75,5 +78,11 @@ public class AirlineModel {
         this.airline.set(airline);
     }
 
+    public TreeItem<String> getRoot() {
+        return root;
+    }
 
+    public void setRoot(TreeItem<String> root) {
+        this.root = root;
+    }
 }

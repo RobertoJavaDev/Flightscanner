@@ -38,6 +38,7 @@ public class AirlineController {
             DialogsUtils.errorDialog(e.getMessage());
         }
         this.airlineCombobox.setItems(this.airlineModel.getAirlineList());
+        this.airlineTreeView.setRoot(this.airlineModel.getRoot());
         initBindings();
     }
 
