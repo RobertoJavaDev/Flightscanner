@@ -25,13 +25,17 @@ public class AirlineModel {
         AirlineDao airlineDao = new AirlineDao(DbManager.getConnectionSource());
         List<Airline> airlines = airlineDao.queryForAll(Airline.class);
         initAirlineList(airlines);
-        initRoot(airline);
+        initRoot(airlines);
         DbManager.closeConnectionSource();
     }
 
-    private void initRoot(ObjectProperty<AirlineFx> airline) {
-
+    private void initRoot(List<Airline> airlines) {
+        airlines.forEach(c->{
+            TreeItem<String> airlineItem = new TreeItem<>(c.getAirline());
+            root.getChildren().add(airlineItem);
+        });
     }
+
 
     private void initAirlineList(List<Airline> airlines) {
         this.airlineList.clear();
