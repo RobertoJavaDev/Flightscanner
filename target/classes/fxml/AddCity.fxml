@@ -13,7 +13,7 @@
     <children>
         <HBox alignment="TOP_CENTER" prefHeight="37.0" prefWidth="580.0" spacing="20.0">
             <children>
-                <Label prefHeight="17.0" prefWidth="69.0" text="%add.city" />
+                <Label prefHeight="17.0" prefWidth="69.0" text="%add.menuCity" />
                 <TextField fx:id="cityTextField" />
                 <Button fx:id="addCityButton" mnemonicParsing="false" onAction="#addCityOnAction" prefHeight="25.0" prefWidth="82.0" text="%add.buttonCity" />
                 <Label prefHeight="17.0" prefWidth="84.0" text="%choose.city" />
