@@ -29,6 +29,7 @@ public class CityModel {
     }
 
     private void initRoot(List<City> city) {
+        this.root.getChildren().clear();
         city.forEach(c->{
             TreeItem<String> cityItem = new TreeItem<>(c.getCity());
             root.getChildren().add(cityItem);

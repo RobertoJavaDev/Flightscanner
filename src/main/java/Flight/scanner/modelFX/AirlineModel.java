@@ -30,6 +30,7 @@ public class AirlineModel {
     }
 
     private void initRoot(List<Airline> airlines) {
+        this.root.getChildren().clear();
         airlines.forEach(c->{
             TreeItem<String> airlineItem = new TreeItem<>(c.getAirline());
             root.getChildren().add(airlineItem);
