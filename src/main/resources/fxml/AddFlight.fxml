@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Flight.scanner.controllers.FlightController">
    <children>
       <HBox prefHeight="78.0" prefWidth="600.0">
          <children>
@@ -19,7 +18,7 @@
                   <Insets left="10.0" top="20.0" />
                </HBox.margin>
             </Label>
-            <ComboBox prefHeight="25.0" prefWidth="125.0">
+            <ComboBox fx:id="airlineComboBoxAirline" onAction="#onActionComboBoxAirline" prefHeight="25.0" prefWidth="125.0">
                <HBox.margin>
                   <Insets top="20.0" />
                </HBox.margin>
@@ -29,7 +28,7 @@
                   <Insets left="10.0" top="20.0" />
                </HBox.margin>
             </Label>
-            <ComboBox prefHeight="25.0" prefWidth="125.0">
+            <ComboBox fx:id="cityComboBoxDeparture" onAction="#onActionComboBoxDeparture" prefHeight="25.0" prefWidth="125.0">
                <HBox.margin>
                   <Insets top="20.0" />
                </HBox.margin>
@@ -39,7 +38,7 @@
                   <Insets left="10.0" top="20.0" />
                </HBox.margin>
             </Label>
-            <ComboBox prefHeight="25.0" prefWidth="125.0">
+            <ComboBox fx:id="cityComboBoxArrival" onAction="#onActionComboBoxArrival" prefHeight="25.0" prefWidth="125.0">
                <HBox.margin>
                   <Insets top="20.0" />
                </HBox.margin>
